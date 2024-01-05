@@ -1,0 +1,46 @@
+.nav-container {
+  display: block;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
+  transition: ease-in-out transform 0.5s;
+  z-index: 99;
+}
+.nav-container.nav-inactive {
+  transform: translateY(-100px);
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  background: linear-gradient(#000, #0000);
+  padding-right: 5em;
+}
+
+.nav .navlink {
+  background: transparent;
+  color: var(--white);
+  text-shadow: 0 0 8px #0007;
+  font-family: var(--jost);
+  font-size: 1.5em;
+  margin: 1em 1.5em;
+  cursor: pointer;
+}
+
+.nav .logo {
+  margin-right: auto;
+  color: #fff;
+}
+
+@media screen and (max-width: 786px) {
+  .nav {
+    justify-content: center;
+    padding-right: 0;
+  }
+  .nav button{
+    font-size: 1em;
+    margin: 1em 1em;
+  }
+}

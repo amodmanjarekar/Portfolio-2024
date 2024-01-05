@@ -1,0 +1,113 @@
+.hero-container {
+  scroll-snap-align: start;
+
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+}
+
+/* Canvas */
+.canvas-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--black);
+}
+
+/* Cover */
+.cover-container {
+  pointer-events: none;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.cover-container h1 {
+  font-family: var(--jost);
+  font-weight: var(--thick);
+  font-size: 12vh;
+  text-shadow: 0 0 24px #000;
+  display: flex;
+  color: var(--pink);
+}
+
+.cover-container .name-letter {
+  --init-delay: 1s;
+  --letter-delay: 150ms;
+
+  transform: rotateY(90deg);
+  animation: turnletters 1s forwards;
+}
+
+@keyframes turnletters {
+  from {
+    opacity: 0;
+    transform: rotateY(90deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+}
+
+.name-letter:nth-of-type(1) {
+  animation-delay: calc(var(--init-delay) + 1 * var(--letter-delay));
+}
+.name-letter:nth-of-type(2) {
+  animation-delay: calc(var(--init-delay) + 2 * var(--letter-delay));
+}
+.name-letter:nth-of-type(3) {
+  animation-delay: calc(var(--init-delay) + 3 * var(--letter-delay));
+}
+.name-letter:nth-of-type(4) {
+  animation-delay: calc(var(--init-delay) + 4 * var(--letter-delay));
+}
+
+.name-letter:nth-of-type(5) {
+  animation-delay: calc(var(--init-delay) + 5 * var(--letter-delay));
+}
+.name-letter:nth-of-type(6) {
+  animation-delay: calc(var(--init-delay) + 6 * var(--letter-delay));
+}
+.name-letter:nth-of-type(7) {
+  animation-delay: calc(var(--init-delay) + 7 * var(--letter-delay));
+}
+.name-letter:nth-of-type(8) {
+  animation-delay: calc(var(--init-delay) + 8 * var(--letter-delay));
+}
+.name-letter:nth-of-type(9) {
+  animation-delay: calc(var(--init-delay) + 9 * var(--letter-delay));
+}
+.name-letter:nth-of-type(10) {
+  animation-delay: calc(var(--init-delay) + 10 * var(--letter-delay));
+}
+.name-letter:nth-of-type(11) {
+  animation-delay: calc(var(--init-delay) + 11 * var(--letter-delay));
+}
+.name-letter:nth-of-type(12) {
+  animation-delay: calc(var(--init-delay) + 12 * var(--letter-delay));
+}
+.name-letter:nth-of-type(13) {
+  animation-delay: calc(var(--init-delay) + 13 * var(--letter-delay));
+}
+.name-letter:nth-of-type(14) {
+  animation-delay: calc(var(--init-delay) + 14 * var(--letter-delay));
+}
+
+@media screen and (max-width: 786px) {
+  .name-letter {
+    display: none;
+  }
+  .name-letter:nth-of-type(1) {
+    display: block;
+  }
+  .name-letter:nth-of-type(5) {
+    margin-left: 0.2em;
+    display: block;
+  }
+}
